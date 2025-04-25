@@ -120,7 +120,7 @@ enable_entity_resolution = true
 
 [telemetry]
 enabled = false
-honeycomb_enabled = true
+honeycomb_enabled = false
 honeycomb_endpoint = "https://api.honeycomb.io"
 honeycomb_proxy_endpoint = "https://otel-proxy.onrender.com"
 service_name = "databridge-core"
