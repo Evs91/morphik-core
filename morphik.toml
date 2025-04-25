@@ -28,7 +28,7 @@ dev_permissions = ["read", "write", "admin"]  # Default dev permissions
 # Ollama models
 ollama_llama = { model_name = "hf.co/DavidAU/Gemma-3-4b-it-MAX-NEO-Imatrix-GGUF:Q8_0-imat", api_base = "http://172.16.20.48:11434" }
 ollama_llama_vision = { model_name = "ollama_chat/gemma3:4b-it-qat", api_base = "http://172.16.20.48:11434", vision = true }
-ollama_reranker = { model_name = "qllama/bge-reranker-v2-m3:Q8_0", api_base = "http://172.16.20.48:11434" }
+ollama_reranker = { model_name = "hf.co/sabafallah/bge-reranker-v2-m3-Q4_K_M-GGUF:Q4_K_M", api_base = "http://172.16.20.48:11434" }
 # If you are running on docker, but running ollama locally use the following
 #ollama_llama_docker = { model_name = "ollama_chat/llama3.2", api_base = "http://host.docker.internal:11434" }
 #ollama_llama_vision_docker = { model_name = "ollama_chat/llama3.2-vision", api_base = "http://host.docker.internal:11434", vision = true }
@@ -81,7 +81,7 @@ model = "ollama_llama_vision"  # Reference to a key in registered_models
 frame_sample_rate = -1  # Set to -1 to disable frame captioning
 
 [reranker]
-use_reranker = true
+use_reranker = false
 provider = "flag"
 model_name = "hf.co/sabafallah/bge-reranker-v2-m3-Q4_K_M-GGUF:Q4_K_M"
 query_max_length = 256
