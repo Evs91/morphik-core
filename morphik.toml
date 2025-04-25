@@ -83,7 +83,7 @@ frame_sample_rate = -1  # Set to -1 to disable frame captioning
 [reranker]
 use_reranker = true
 provider = "flag"
-model_name = "qllama/bge-reranker-v2-m3:Q8_0"
+model_name = "hf.co/sabafallah/bge-reranker-v2-m3-Q4_K_M-GGUF:Q4_K_M"
 query_max_length = 256
 passage_max_length = 512
 use_fp16 = true
