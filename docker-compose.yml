@@ -40,9 +40,6 @@ services:
         condition: service_healthy
       config-check:
         condition: service_completed_successfully
-      ollama:
-        condition: service_started
-        required: false
     networks:
       - morphik-network
     env_file:
@@ -70,9 +67,6 @@ services:
         condition: service_healthy
       config-check:
         condition: service_completed_successfully
-      ollama:
-        condition: service_started
-        required: false
     networks:
       - morphik-network
     env_file:
@@ -122,6 +116,5 @@ networks:
 
 volumes:
   postgres_data:
-  ollama_data:
   huggingface_cache:
   redis_data:
